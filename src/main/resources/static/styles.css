@@ -1,0 +1,62 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Bebas Neue";
+    background-color: rgb(9,159,156);
+}
+
+header {
+    text-align: center;
+    background-color: rgb(129,159,9);
+    color: rgb(190,191,35);
+}
+
+div#content {
+    margin: 25px 50px;
+    text-align: center;
+    background-color: rgb(191,35,35);
+}
+
+div#addressForm > label {
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+div#addressForm > input {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+
+div.ingredient-group:nth-child(odd) {
+    float: left;
+    padding-right: 20px;
+}
+
+div.ingredient-group:nth-child(even) {
+    float: left;
+    padding-right: 0;
+}
+
+div.ingredient-group {
+    width: 50%;
+}
+
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+span.validationError {
+    color: red;
+}

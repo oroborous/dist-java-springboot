@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to</h1>
+    <img th:src="@{/images/TacoCloud.png}"/>
+    <h1>Taco Cloud</h1>
+</header>
+<div id="content">
+
+    <h2><a th:href="@{/design}"/>Design your taco</a></h2>
+
+    <hr/>
+
+    <h1>Secret Admin Menu</h1>
+    <form th:action="@{/admin/ordersByZip}" method="get">
+        <input type="search" name="zipCode"/>
+        <input type="submit" value="Search By Zip"/>
+    </form>
+    <br/>
+    <br/>
+    <a th:href="@{/admin/waukeshaOrders}">Waukesha Orders</a>
+
+</div>
+</body>
+</html>
