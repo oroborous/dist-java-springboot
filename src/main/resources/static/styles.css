@@ -1,38 +1,45 @@
 a {
-    text-decoration: none;
+    color: black;
 }
 
 body {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue", cursive;
     background-color: rgb(9,159,156);
 }
 
 header {
     text-align: center;
-    background-color: rgb(129,159,9);
-    color: rgb(190,191,35);
+    background-color: cornsilk;
+    margin: 25px 50px;
+    padding: 50px;
+}
+
+div#taco h3,u,li {
+    text-align: left;
 }
 
 div#content {
     margin: 25px 50px;
     text-align: center;
     background-color: rgb(191,35,35);
+    font-family: "Montserrat", sans-serif;
+    padding: 25px 0 50px 0;
 }
 
 div#addressForm > label {
-    width: 100px;
+    width: 150px;
     display: inline-block;
     margin-bottom: 10px;
+    text-align: right;
 }
 
 div#addressForm > input {
     width: 200px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
-
 div.ingredient-group:nth-child(odd) {
-    float: left;
     padding-right: 20px;
 }
 
@@ -42,7 +49,10 @@ div.ingredient-group:nth-child(even) {
 }
 
 div.ingredient-group {
+    float: left;
     width: 50%;
+    text-align: left;
+    padding-left: 50px;
 }
 
 .grid:after {
@@ -58,5 +68,5 @@ div.ingredient-group {
 }
 
 span.validationError {
-    color: red;
+    color: cornsilk;
 }

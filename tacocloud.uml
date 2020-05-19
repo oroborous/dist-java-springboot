@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.INGREDIENT</OriginalElement>
+  <nodes>
+    <node x="484.0" y="0.0">3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_ORDER</node>
+    <node x="0.0" y="144.5">3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.INGREDIENT</node>
+    <node x="216.00000000000003" y="129.5">3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO</node>
+    <node x="410.0" y="500.0">3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_ORDER_TACOS</node>
+    <node x="49.0" y="500.0">3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_INGREDIENTS</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_ORDER_TACOS" target="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_ORDER">
+      <point x="50.25" y="-62.0" />
+      <point x="560.75" y="475.0" />
+      <point x="619.0" y="475.0" />
+      <point x="0.0" y="225.0" />
+    </edge>
+    <edge source="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_INGREDIENTS" target="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.INGREDIENT">
+      <point x="-69.5" y="-62.0" />
+      <point x="118.5" y="475.0" />
+      <point x="98.0" y="475.0" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_ORDER_TACOS" target="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO">
+      <point x="-50.25" y="-62.0" />
+      <point x="460.25" y="475.0" />
+      <point x="402.0" y="475.0" />
+      <point x="62.0" y="95.5" />
+    </edge>
+    <edge source="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO_INGREDIENTS" target="3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.TACO">
+      <point x="69.5" y="-62.0" />
+      <point x="257.5" y="475.0" />
+      <point x="278.0" y="475.0" />
+      <point x="-62.0" y="95.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="377.0" y="312.0" />
+  <SelectedNodes>
+    <node>3bc1e626-a26e-4c1f-8243-1fa022b7b51f.TABLE:DEFAULT.TACOS.INGREDIENT</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

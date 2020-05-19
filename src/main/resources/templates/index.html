@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Taco Cloud</title>
@@ -10,23 +10,13 @@
 
 <header>
     <h1>Welcome to</h1>
-    <img th:src="@{/images/TacoCloud.png}"/>
+    <img th:src="@{/images/TacoCloud.png}" alt="Taco Cloud Logo" width="100" height="100"/>
     <h1>Taco Cloud</h1>
 </header>
 <div id="content">
 
-    <h2><a th:href="@{/design}"/>Design your taco</a></h2>
+    <h2><a th:href="@{/design}">Design your taco</a></h2>
 
-    <hr/>
-
-    <h1>Secret Admin Menu</h1>
-    <form th:action="@{/admin/ordersByZip}" method="get">
-        <input type="search" name="zipCode"/>
-        <input type="submit" value="Search By Zip"/>
-    </form>
-    <br/>
-    <br/>
-    <a th:href="@{/admin/waukeshaOrders}">Waukesha Orders</a>
 
 </div>
 </body>
