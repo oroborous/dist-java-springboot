@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+<!-- FOR SUB PAGES -->
+<header>
+    <a th:href="@{/}"><img th:src="@{/images/TacoCloud.png}" alt="Taco Cloud Logo" width="100" height="100"/>
+        <br/>
+        Taco Cloud</a>
+</header>
+
+<div id="content">
+
+    <h1>Your order is complete</h1>
+
+    <div th:object="${order}">
+        <p>Name: <span th:text="*{name}">NAME</span></p>
+        <p>Address: <span th:text="*{street} + ' ' + *{city} + ', ' + *{state} + ' ' + *{zip}">ADDRESS</span></p>
+        <br/>
+
+        <div th:each="taco : *{tacos}" class="taco">
+            <h3 th:text="${taco.name}">TACO NAME</h3>
+            <ul th:each="ingredient : ${taco.ingredients}">
+                <li th:text="${ingredient.name}">INGREDIENT</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

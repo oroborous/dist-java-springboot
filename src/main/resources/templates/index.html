@@ -17,7 +17,16 @@
 
     <h2><a th:href="@{/design}">Design your taco</a></h2>
 
+    <hr/>
 
+    <h1>Secret Admin Menu</h1>
+    <form th:action="@{/admin/ordersByZip}" method="get">
+        <input type="search" name="zipCode"/>
+        <input type="submit" value="Search By Zip"/>
+    </form>
+    <br/>
+    <br/>
+    <a th:href="@{/admin/waukeshaOrders}">Waukesha Orders</a>
 </div>
 </body>
 </html>

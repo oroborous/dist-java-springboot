@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud Administration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<header>
+    <a th:href="@{/}"><img th:src="@{/images/TacoCloud.png}"/>
+        <br/>
+        Taco Cloud</a>
+</header>
+<div id="content">
+
+    <h1>View All Orders</h1>
+
+    <h3><span th:text="${reportType}">REPORT TYPE</span></h3>
+    <div th:each="order : ${orders}">
+
+        <hr/>
+        <h2 th:text="'Order ' + ${order.id}">ORDER ID</h2>
+        <p>Name: <span th:text="${order.name}">NAME</span></p>
+        <p>Address: <span th:text="${order.street} + ' ' + ${order.city} + ', ' + ${order.state} + ' ' + ${order.zip}">NAME</span>
+        </p>
+        <br/>
+
+        <div th:each="taco : ${order.tacos}" class="taco">
+            <h3 th:text="${taco.name}">TACO NAME</h3>
+            <ul th:each="ingredient : ${taco.ingredients}">
+                <li th:text="${ingredient.name}">INGREDIENT</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
