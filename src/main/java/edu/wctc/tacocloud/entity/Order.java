@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
@@ -35,6 +36,10 @@ public class Order {
 
     @NotBlank(message = "Zip code is required")
     private String zip;
+
+    @NotBlank(message = "Email is required")
+    @Email
+    private String email;
 
 //    @CreditCardNumber(message = "Not a valid credit card number")
     private String ccNumber;

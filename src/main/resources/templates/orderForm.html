@@ -66,6 +66,13 @@
                   th:errors="*{zip}">ERROR</span>
             <br/>
 
+            <label for="email">Email </label>
+            <input type="text" th:field="*{email}" id="email"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('email')}"
+                  th:errors="*{email}">ERROR</span>
+            <br/>
+
             <h3>Here's how I'll pay...</h3>
 
             <label for="ccNumber">Credit Card # </label>

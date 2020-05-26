@@ -27,6 +27,7 @@ create table Taco_Order (
     city varchar(50) not null,
     state varchar(2) not null,
     zip varchar(10) not null,
+    email varchar(100) not null,
     cc_Number varchar(20) not null,
     cc_Expiration varchar(5) not null,
     ccCVV varchar(3) not null,

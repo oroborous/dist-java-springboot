@@ -49,10 +49,10 @@ insert into Taco_Ingredients(taco_id, ingredients_id) values (102, 'SRCR');
 insert into Taco_Ingredients(taco_id, ingredients_id) values (103, 'FLTO');
 insert into Taco_Ingredients(taco_id, ingredients_id) values (103, 'LETC');
 
-insert into Taco_Order (id, cccvv, cc_expiration, cc_number, city, name, placed_at, state, street, zip)
-values (100, '111', '04/23', '1111-2222-3333-4444', 'Waukesha', 'Hello Kitty', '2020-05-15', 'WI', '123 4th St', '53188');
-insert into Taco_Order (id, cccvv, cc_expiration, cc_number, city, name, placed_at, state, street, zip)
-values (101, '999', '11/22', '5555-6666-7777-8888', 'Pewaukee', 'Dr. Instructor', '2020-05-16', 'WI', '800 Main St', '53072');
+insert into Taco_Order (id, cccvv, cc_expiration, cc_number, city, name, placed_at, state, street, zip, email)
+values (100, '111', '04/23', '1111-2222-3333-4444', 'Waukesha', 'Hello Kitty', '2020-05-15', 'WI', '123 4th St', '53188', 'hkitty@wctc.edu');
+insert into Taco_Order (id, cccvv, cc_expiration, cc_number, city, name, placed_at, state, street, zip, email)
+values (101, '999', '11/22', '5555-6666-7777-8888', 'Pewaukee', 'Dr. Instructor', '2020-05-16', 'WI', '800 Main St', '53072', 'dinstr@wctc.edu');
 
 insert into Taco_Order_Tacos (order_id, tacos_id) values (100, 100);
 insert into Taco_Order_Tacos (order_id, tacos_id) values (100, 101);

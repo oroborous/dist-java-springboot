@@ -2,6 +2,7 @@ package edu.wctc.tacocloud.controller;
 
 import edu.wctc.tacocloud.entity.Order;
 import edu.wctc.tacocloud.repository.OrderRepository;
+import edu.wctc.tacocloud.service.EmailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,9 +23,12 @@ import javax.validation.Valid;
 public class OrderController {
     private OrderRepository orderRepo;
 
+    private EmailService emailService;
+
     @Autowired
-    public OrderController(OrderRepository orderRepo) {
+    public OrderController(OrderRepository orderRepo, EmailService emailService) {
         this.orderRepo = orderRepo;
+        this.emailService = emailService;
     }
 
     @GetMapping("/current")
@@ -45,6 +49,8 @@ public class OrderController {
 
         orderRepo.save(order);
         sessionStatus.setComplete();
+
+        emailService.sendSimpleMessage(order.getEmail(), "Taco Cloud Order Confirmation", "Order #" + order.getId() + " is on its way!");
 
         return "confirm";
     }
